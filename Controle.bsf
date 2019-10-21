@@ -1,0 +1,985 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 224 528)
+	(text "Controle" (rect 5 0 46 12)(font "Arial" ))
+	(text "inst" (rect 8 496 25 508)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "overflow" (rect 0 0 42 12)(font "Arial" ))
+		(text "overflow" (rect 21 27 63 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "DIV0" (rect 0 0 24 12)(font "Arial" ))
+		(text "DIV0" (rect 21 43 45 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 59 35 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "EQF" (rect 0 0 22 12)(font "Arial" ))
+		(text "EQF" (rect 21 75 43 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "GTF" (rect 0 0 21 12)(font "Arial" ))
+		(text "GTF" (rect 21 91 42 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "OpCode[5..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "OpCode[5..0]" (rect 21 107 87 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "funct[5..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "funct[5..0]" (rect 21 123 72 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "PCWrite" (rect 0 0 41 12)(font "Arial" ))
+		(text "PCWrite" (rect 146 27 187 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 1))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "MemCtrl" (rect 0 0 41 12)(font "Arial" ))
+		(text "MemCtrl" (rect 146 43 187 55)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48)(line_width 1))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "IRWrite" (rect 0 0 37 12)(font "Arial" ))
+		(text "IRWrite" (rect 150 59 187 71)(font "Arial" ))
+		(line (pt 208 64)(pt 192 64)(line_width 1))
+	)
+	(port
+		(pt 208 80)
+		(output)
+		(text "A_Control" (rect 0 0 48 12)(font "Arial" ))
+		(text "A_Control" (rect 139 75 187 87)(font "Arial" ))
+		(line (pt 208 80)(pt 192 80)(line_width 1))
+	)
+	(port
+		(pt 208 96)
+		(output)
+		(text "B_Control" (rect 0 0 48 12)(font "Arial" ))
+		(text "B_Control" (rect 139 91 187 103)(font "Arial" ))
+		(line (pt 208 96)(pt 192 96)(line_width 1))
+	)
+	(port
+		(pt 208 112)
+		(output)
+		(text "RegControl" (rect 0 0 55 12)(font "Arial" ))
+		(text "RegControl" (rect 132 107 187 119)(font "Arial" ))
+		(line (pt 208 112)(pt 192 112)(line_width 1))
+	)
+	(port
+		(pt 208 128)
+		(output)
+		(text "ALUOutControl" (rect 0 0 74 12)(font "Arial" ))
+		(text "ALUOutControl" (rect 113 123 187 135)(font "Arial" ))
+		(line (pt 208 128)(pt 192 128)(line_width 1))
+	)
+	(port
+		(pt 208 144)
+		(output)
+		(text "EPCWrite" (rect 0 0 48 12)(font "Arial" ))
+		(text "EPCWrite" (rect 139 139 187 151)(font "Arial" ))
+		(line (pt 208 144)(pt 192 144)(line_width 1))
+	)
+	(port
+		(pt 208 160)
+		(output)
+		(text "MDControl" (rect 0 0 51 12)(font "Arial" ))
+		(text "MDControl" (rect 136 155 187 167)(font "Arial" ))
+		(line (pt 208 160)(pt 192 160)(line_width 1))
+	)
+	(port
+		(pt 208 176)
+		(output)
+		(text "HI_Control" (rect 0 0 53 12)(font "Arial" ))
+		(text "HI_Control" (rect 134 171 187 183)(font "Arial" ))
+		(line (pt 208 176)(pt 192 176)(line_width 1))
+	)
+	(port
+		(pt 208 192)
+		(output)
+		(text "LO_Control" (rect 0 0 55 12)(font "Arial" ))
+		(text "LO_Control" (rect 132 187 187 199)(font "Arial" ))
+		(line (pt 208 192)(pt 192 192)(line_width 1))
+	)
+	(port
+		(pt 208 208)
+		(output)
+		(text "IorD[1..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "IorD[1..0]" (rect 140 203 187 215)(font "Arial" ))
+		(line (pt 208 208)(pt 192 208)(line_width 3))
+	)
+	(port
+		(pt 208 224)
+		(output)
+		(text "ALUSrcA[1..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "ALUSrcA[1..0]" (rect 117 219 187 231)(font "Arial" ))
+		(line (pt 208 224)(pt 192 224)(line_width 3))
+	)
+	(port
+		(pt 208 240)
+		(output)
+		(text "ALUSrcB[1..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "ALUSrcB[1..0]" (rect 117 235 187 247)(font "Arial" ))
+		(line (pt 208 240)(pt 192 240)(line_width 3))
+	)
+	(port
+		(pt 208 256)
+		(output)
+		(text "ExcpCtrl[1..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "ExcpCtrl[1..0]" (rect 119 251 187 263)(font "Arial" ))
+		(line (pt 208 256)(pt 192 256)(line_width 3))
+	)
+	(port
+		(pt 208 272)
+		(output)
+		(text "ShiftSrc[1..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "ShiftSrc[1..0]" (rect 121 267 187 279)(font "Arial" ))
+		(line (pt 208 272)(pt 192 272)(line_width 3))
+	)
+	(port
+		(pt 208 288)
+		(output)
+		(text "ShiftAmt[1..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "ShiftAmt[1..0]" (rect 118 283 187 295)(font "Arial" ))
+		(line (pt 208 288)(pt 192 288)(line_width 3))
+	)
+	(port
+		(pt 208 304)
+		(output)
+		(text "SSControl[1..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "SSControl[1..0]" (rect 112 299 187 311)(font "Arial" ))
+		(line (pt 208 304)(pt 192 304)(line_width 3))
+	)
+	(port
+		(pt 208 320)
+		(output)
+		(text "LSControl[1..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "LSControl[1..0]" (rect 113 315 187 327)(font "Arial" ))
+		(line (pt 208 320)(pt 192 320)(line_width 3))
+	)
+	(port
+		(pt 208 336)
+		(output)
+		(text "RegDst[2..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "RegDst[2..0]" (rect 124 331 187 343)(font "Arial" ))
+		(line (pt 208 336)(pt 192 336)(line_width 3))
+	)
+	(port
+		(pt 208 352)
+		(output)
+		(text "PCSource[2..0]" (rect 0 0 75 12)(font "Arial" ))
+		(text "PCSource[2..0]" (rect 112 347 187 359)(font "Arial" ))
+		(line (pt 208 352)(pt 192 352)(line_width 3))
+	)
+	(port
+		(pt 208 368)
+		(output)
+		(text "ALUControl[2..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "ALUControl[2..0]" (rect 105 363 187 375)(font "Arial" ))
+		(line (pt 208 368)(pt 192 368)(line_width 3))
+	)
+	(port
+		(pt 208 384)
+		(output)
+		(text "ShiftControl[2..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "ShiftControl[2..0]" (rect 103 379 187 391)(font "Arial" ))
+		(line (pt 208 384)(pt 192 384)(line_width 3))
+	)
+	(port
+		(pt 208 400)
+		(output)
+		(text "DataSrc[3..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "DataSrc[3..0]" (rect 121 395 187 407)(font "Arial" ))
+		(line (pt 208 400)(pt 192 400)(line_width 3))
+	)
+	(port
+		(pt 208 416)
+		(output)
+		(text "estado[6..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "estado[6..0]" (rect 128 411 187 423)(font "Arial" ))
+		(line (pt 208 416)(pt 192 416)(line_width 3))
+	)
+	(port
+		(pt 208 432)
+		(output)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 163 427 187 439)(font "Arial" ))
+		(line (pt 208 432)(pt 192 432)(line_width 1))
+	)
+	(port
+		(pt 208 448)
+		(output)
+		(text "DControl" (rect 0 0 43 12)(font "Arial" ))
+		(text "DControl" (rect 144 443 187 455)(font "Arial" ))
+		(line (pt 208 448)(pt 192 448)(line_width 1))
+	)
+	(port
+		(pt 208 464)
+		(output)
+		(text "MDMux" (rect 0 0 36 12)(font "Arial" ))
+		(text "MDMux" (rect 151 459 187 471)(font "Arial" ))
+		(line (pt 208 464)(pt 192 464)(line_width 1))
+	)
+	(parameter
+		"Fetch1"
+		"0000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Espera1Fetch"
+		"0000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Espera2Fetch"
+		"0000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Fetch2"
+		"0000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Decode1"
+		"0000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"EsperaDecode"
+		"0000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Decode2"
+		"0000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Instrucao"
+		"0000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Add2"
+		"0001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Sub2"
+		"0001001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"And2"
+		"0001010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AddSubAnd"
+		"0001011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AddSubAnd2"
+		"0001100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Addi2"
+		"0001101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Addi3"
+		"0001110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Addi4"
+		"0001111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Break2"
+		"0010000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Break3"
+		"0010001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Rte2"
+		"0010010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Sll2"
+		"0010011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Sll3"
+		"0010100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Sll4"
+		"0010101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Sllv2"
+		"0010110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Sllv3"
+		"0010111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Srl2"
+		"0011000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Srl3"
+		"0011001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Sra2"
+		"0011010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Sra3"
+		"0011011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Srav2"
+		"0011100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Srav3"
+		"0011101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Addiu2"
+		"0011110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Addiu3"
+		"0011111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Slt2"
+		"0100000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"Slt3"
+		"0100001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"jr2"
+		"0100010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"xchg2"
+		"0100011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"xchg3"
+		"0100100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"xchg4"
+		"0100101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"j2"
+		"0100110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"jal2"
+		"0100111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lui2"
+		"0101000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lui3"
+		"0101001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lui4"
+		"0101010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"slti2"
+		"0101011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"slti3"
+		"0101100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"beq2"
+		"0101101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"beq3"
+		"0101110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"beq4"
+		"0101111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"bne2"
+		"0110000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"bne3"
+		"0110001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ble2"
+		"0110010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ble3"
+		"0110011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"bgt2"
+		"0110100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"bgt3"
+		"0110101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"OVERFLOW"
+		"0110110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sb2"
+		"0110111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sb3"
+		"0111000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sbWait"
+		"0111001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sbWait2"
+		"0111010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lb2"
+		"0111011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lb3"
+		"0111100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lbWait"
+		"0111101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lbWait2"
+		"0111110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lbWait3"
+		"0111111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lh2"
+		"1000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lh3"
+		"1000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lhWait"
+		"1000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lhWait2"
+		"1000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lhWait3"
+		"1000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lw2"
+		"1000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lw3"
+		"1000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lwWait"
+		"1000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lwWait2"
+		"1001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"lwWait3"
+		"1001001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sh2"
+		"1001010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sh3"
+		"1001011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"shWait"
+		"1001100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"shWait2"
+		"1001101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sw2"
+		"1001110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sw3"
+		"1001111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"swWait"
+		"1010000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"swWait2"
+		"1010001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"blm2"
+		"1010010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"blm3"
+		"1010011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"blm4"
+		"1010100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"blm5"
+		"1010101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"blm6"
+		"1010110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"overflow2"
+		"1010110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"overflow3"
+		"1010111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"overflow4"
+		"1011000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"overflow5"
+		"1011001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"INEXISTENTE"
+		"1011010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"inexistente2"
+		"1011011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"inexistente3"
+		"1011100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"inexistente4"
+		"1011101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"inexistente5"
+		"1011110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"mult2"
+		"1011111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"mult3"
+		"1100000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"mfhi2"
+		"1100001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"mflo2"
+		"1100010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"div2"
+		"1100011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"div3"
+		"1100100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DIV00"
+		"1100101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"div02"
+		"1100110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"div03"
+		"1100111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"div04"
+		"1101000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"div05"
+		"1101001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ADD"
+		"100000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SUB"
+		"100010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AND"
+		"100100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"BREAK"
+		"001101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"RTE"
+		"010011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SLL"
+		"000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SLLV"
+		"000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SRA"
+		"000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SRAV"
+		"000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SRL"
+		"000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SLT"
+		"101010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"JR"
+		"001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"XCHG"
+		"000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"MULT"
+		"011000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"MFHI"
+		"010000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"MFLO"
+		"010010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"DIV"
+		"011010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ARIT"
+		"000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ADDI"
+		"001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ADDIU"
+		"001001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LUI"
+		"001111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SLTI"
+		"001010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"BEQ"
+		"000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"BNE"
+		"000101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"BLE"
+		"000110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"BGT"
+		"000111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LB"
+		"100000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LH"
+		"100001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LW"
+		"100011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SB"
+		"101000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SH"
+		"101001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SW"
+		"101011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"BLM"
+		"000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"J"
+		"000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"JAL"
+		"000011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 192 496)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 224 -64 324 16))
+)
